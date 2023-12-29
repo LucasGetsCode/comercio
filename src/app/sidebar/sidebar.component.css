@@ -1,6 +1,120 @@
-aside {
-    background-color: #333;
-    color: #fff;
-    width: 250px;
-    padding: 20px;
-  }
+/* Estilos para la flechita lateral */
+.sidebar {
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -200px;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+  transition: 0.5s;
+  visibility: hidden;
+}
+
+.desactivada {
+  margin-left: 180;
+  text-align: right;
+}
+
+.flechita-container {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: row;
+  /* margin-left: 5px; */
+  align-items: center;
+  transform: scaleX(-1);
+}
+
+.flechita-container.open {
+  left: 200px;
+  transform: scaleX(1);
+}
+
+#flechita-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 0px solid;
+  width: 2rem;
+  height: 4rem;
+}
+
+
+#flechita-arriba {
+  transform: translateY(0.15rem) rotate(15deg) translateZ(0px);
+  background-color: #999;
+  border-radius: 999px;
+  width: .25rem;
+  height: .75rem;
+  transition: 0.5s;
+}
+
+#flechita-abajo {
+  transform: translateY(-0.15rem) rotate(-15deg) translateZ(0px);
+  background-color: #999;
+  border-radius: 999px;
+  width: .25rem;
+  height: .75rem;
+  transition: 0.5s;
+}
+
+#flechita-container:hover div {
+  background-color: #000;
+}
+
+
+#flechita-info {
+  margin-left: 5px;
+  display: none;
+}
+
+#flechita-container:hover+#flechita-info {
+  display: inline-block;
+  /* Mostrar cuando #elemento1 está siendo hover */
+}
+
+.contenido {
+  margin: 0px 30px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  text-transform: capitalize;
+}
+
+.sidebar a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+}
+
+.sidebar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Mostrar la flechita lateral cuando tiene la clase 'open' */
+.sidebar.open {
+  left: 0;
+  visibility: visible;
+}
+
+/* Estilos para el contenido principal */
+.content {
+  margin-left: 200px;
+  padding: 16px;
+  transition: margin-left 0.5s;
+}
