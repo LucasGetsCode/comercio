@@ -11,53 +11,33 @@ body {
   margin: 0;
 }
 
-
 .container {
-  min-height: 100%;
+  min-height: 60%;
   display: flex;
   flex-direction: column;
   margin: 0 4rem;
 }
 
+.header, .footer {
+  display: flex;
+  flex-direction: column;
+  height: 19%;
+} 
+
 main {
   flex: 1;
 }
 
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
-  margin-top: auto;
-}
-
-.footer-content {
+.super-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
 }
 
-.footer-logo {
-  font-size: 1.5em;
-  font-weight: bold;
+.pagina {  
+  flex: 1;
+  transition: margin-left 0.5s ease-in-out;
 }
 
-.footer-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-links li {
-  display: inline;
-  margin-right: 20px;
-}
-
-.footer-links a {
-  text-decoration: none;
-  color: #fff;
-}
-
-.footer-bottom {
-  margin-top: 20px;
+.pagina.open {
+  margin-left: 200px;
 }

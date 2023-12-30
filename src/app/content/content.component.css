@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.par {
+    margin-right: auto;
+}
+
+.impar {
+    margin-left: auto;
+}

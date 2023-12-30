@@ -3,11 +3,6 @@
     <button class="toggler" type="button" (click)="toggleSidebar()">☰</button>
   </div> -->
   <div class="contenido">
-    <ul>
-      <li *ngFor="let carpeta of carpetas">
-        <a (click)="cambio_carpeta(carpeta)" href="#">{{ carpeta.nombre }}</a>
-      </li>
-    </ul>
   </div>
 </div>
 <div class="flechita-container" [ngClass]="{ open: sidebarOpen }">
