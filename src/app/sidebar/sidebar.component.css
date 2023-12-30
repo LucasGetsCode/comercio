@@ -26,7 +26,6 @@
   flex-direction: row;
   /* margin-left: 5px; */
   align-items: center;
-  transform: scaleX(-1);
 }
 
 .flechita-container.open {
@@ -64,17 +63,46 @@
   transition: 0.5s;
 }
 
+#flechita-container.open {
+  transform: scaleX(-1);
+}
+
 #flechita-container:hover div {
   background-color: #000;
 }
 
-
-#flechita-info {
-  margin-left: 5px;
-  display: none;
+.punta {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7px 7px 7px 0;
+  border-color: transparent #000 transparent transparent;
 }
 
-#flechita-container:hover+#flechita-info {
+.flechita-info {
+  transition: 0.5s;
+  background-color: #000;
+  padding: 10px;
+  border-radius: .5rem;
+}
+
+.flechita-info p {
+  color: #fff;
+  margin: 0px;
+}
+
+.globo {
+  display: none;
+  align-items: center;
+}
+
+#flechita-container:hover+.globo {
+  /* display: inline-block; */
+  display: inline-flex;
+}
+
+
+#flechita-container:hover+.flechita-info {
   display: inline-block;
   /* Mostrar cuando #elemento1 está siendo hover */
 }

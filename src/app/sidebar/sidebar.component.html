@@ -11,11 +11,19 @@
   </div>
 </div>
 <div class="flechita-container" [ngClass]="{ open: sidebarOpen }">
-  <button id="flechita-container" title="flechita" (click)="toggleSidebar()">
+
+  <button type="button" id="flechita-container" title="flechita" (click)="toggleSidebar()"
+    [ngClass]="{ open: !sidebarOpen }">
     <div id="flechita-arriba"></div>
     <div id="flechita-abajo"></div>
   </button>
-  <div [ngClass]="{ open: sidebarOpen }">
-    <p id="flechita-info">abrir barra</p>
+  <div class="globo">
+    <div class="punta"></div>
+    <div *ngIf="sidebarOpen" class="flechita-info">
+      <p>Cerrar</p>
+    </div>
+    <div *ngIf="!sidebarOpen" class="flechita-info">
+      <p>Abrir</p>
+    </div>
   </div>
 </div>
