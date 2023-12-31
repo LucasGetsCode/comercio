@@ -11,7 +11,7 @@ export class AppComponent {
 
   toggleSidebar() {
     this.sidebarOpen = !this.sidebarOpen;
-      
+
   }
 
 }

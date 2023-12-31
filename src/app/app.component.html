@@ -3,8 +3,9 @@
     <div class="pagina" [ngClass]="{open: sidebarOpen}">
         <app-header class="header"></app-header>
         <div class="container">
-            <app-content class="content"></app-content>
+            <router-outlet class="content"></router-outlet>
+            <!-- <app-content class="content"></app-content> -->
         </div>
-        <app-footer class="footer"></app-footer>    
+        <app-footer class="footer"></app-footer>
     </div>
 </div>
